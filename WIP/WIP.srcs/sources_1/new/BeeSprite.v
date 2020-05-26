@@ -24,9 +24,9 @@ module BeeSprite(
     BeeRom BeeVRom (.i_addr(address),.i_clk2(Pclk),.o_data(dataout));
             
     // setup character positions and sizes
-    reg [9:0] BeeX = 297; // Bee X start position
-    reg [8:0] BeeY = 433; // Bee Y start position
-    localparam BeeWidth = 34; // Bee width in pixels
+    reg [9:0] BeeX = 310; // Bee X start position
+    reg [8:0] BeeY = 310; // Bee Y start position
+    localparam BeeWidth = 32; // Bee width in pixels
     localparam BeeHeight = 27; // Bee height in pixels
   
     always @ (posedge Pclk)
@@ -35,7 +35,7 @@ module BeeSprite(
             begin // check for left or right button pressed
                 if (BR == 1 && BeeX<640-BeeWidth)
                     BeeX<=BeeX+1;
-                if (BL == 1 && BeeX>0)
+                if (BL == 1 && BeeX>1)
                     BeeX<=BeeX-1;
                 if (BU == 1 && BeeY>BeeHeight)
                     BeeY<=BeeY-1;

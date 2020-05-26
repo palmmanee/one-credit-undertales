@@ -19,28 +19,36 @@ proc create_report { reportName command } {
 }
 set_param chipscope.maxJobs 2
 set_param xicom.use_bs_reader 1
-set_msg_config -id {Common 17-41} -limit 10000000
 create_project -in_memory -part xc7a35tcpg236-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir {C:/Users/Nai/Desktop/BeeInvaders/Tutorials Basys 3/WIP/WIP.cache/wt} [current_project]
-set_property parent.project_path {C:/Users/Nai/Desktop/BeeInvaders/Tutorials Basys 3/WIP/WIP.xpr} [current_project]
+set_property webtalk.parent_dir C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.cache/wt [current_project]
+set_property parent.project_path C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property board_part digilentinc.com:basys3:part0:1.1 [current_project]
-set_property ip_output_repo {c:/Users/Nai/Desktop/BeeInvaders/Tutorials Basys 3/WIP/WIP.cache/ip} [current_project]
+set_property ip_output_repo c:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_mem {
-  {C:/Users/Nai/Desktop/BeeInvaders/Tutorials Basys 3/WIP/WIP.srcs/sources_1/new/pal24bit.mem}
-  {C:/Users/Nai/Desktop/BeeInvaders/Tutorials Basys 3/WIP/WIP.srcs/sources_1/new/Bee.mem}
+  C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/pal24bit.mem
+  C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/Bee.mem
+  C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/RedSoul.mem
+  C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/San.mem
+  C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/SanPal.mem
 }
 read_verilog -library xil_defaultlib {
-  {C:/Users/Nai/Desktop/BeeInvaders/Tutorials Basys 3/WIP/WIP.srcs/sources_1/new/BeeRom.v}
-  {C:/Users/Nai/Desktop/BeeInvaders/Tutorials Basys 3/WIP/WIP.srcs/sources_1/new/BeeSprite.v}
-  {C:/Users/Nai/Desktop/BeeInvaders/Tutorials Basys 3/WIP/WIP.srcs/sources_1/new/vga640x480.v}
-  {C:/Users/Nai/Desktop/BeeInvaders/Tutorials Basys 3/WIP/WIP.srcs/sources_1/new/Top.v}
+  C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/BeeRom.v
+  C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/BeeSprite.v
+  C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/FrameSprite.v
+  C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/PS2Receiver.v
+  C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/SanRom.v
+  C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/SanSprite.v
+  C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/debouncer.v
+  C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/keyboard.v
+  C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/vga640x480.v
+  C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/Top.v
 }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -50,8 +58,8 @@ read_verilog -library xil_defaultlib {
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc {{C:/Users/Nai/Desktop/BeeInvaders/Tutorials Basys 3/WIP/WIP.srcs/constrs_1/new/basys3.xdc}}
-set_property used_in_implementation false [get_files {{C:/Users/Nai/Desktop/BeeInvaders/Tutorials Basys 3/WIP/WIP.srcs/constrs_1/new/basys3.xdc}}]
+read_xdc C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/constrs_1/new/basys3.xdc
+set_property used_in_implementation false [get_files C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/constrs_1/new/basys3.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]

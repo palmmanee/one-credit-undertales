@@ -60,7 +60,6 @@ proc step_failed { step } {
   close $ch
 }
 
-set_msg_config -id {Common 17-41} -limit 10000000
 
 start_step write_bitstream
 set ACTIVE_STEP write_bitstream
@@ -69,7 +68,7 @@ set rc [catch {
   set_param chipscope.maxJobs 2
   set_param xicom.use_bs_reader 1
   open_checkpoint Top_routed.dcp
-  set_property webtalk.parent_dir {C:/Users/Nai/Desktop/BeeInvaders/Tutorials Basys 3/WIP/WIP.cache/wt} [current_project]
+  set_property webtalk.parent_dir C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.cache/wt [current_project]
   catch { write_mem_info -force Top.mmi }
   write_bitstream -force Top.bit 
   catch {write_debug_probes -quiet -force Top}

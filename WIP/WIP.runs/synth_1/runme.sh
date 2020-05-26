@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/Nai/Desktop/BeeInvaders/Tutorials Basys 3/WIP/WIP.runs/synth_1'
+HD_PWD='C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
