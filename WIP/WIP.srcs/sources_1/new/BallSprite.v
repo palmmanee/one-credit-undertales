@@ -8,15 +8,15 @@ module BallSprite(
     );
     
     reg [9:0] hit=0;          // counter to slow alien movement
-    reg [9:0] B1X = 300;            // Alien1 X start position
-    reg [9:0] B1Y = 250;             // Alien1 Y start position
+    reg [9:0] B1X = 251;            // Alien1 X start position
+    reg [9:0] B1Y = 370;             // Alien1 Y start position
     reg [1:0] Bdir = 1;             // direction of aliens: 0=right, 1=left
 
 
     
     always @(posedge Pclk)
         begin
-            if (((xx-100)**2 + (yy-100)**2) <= 25)
+            if (((xx-B1X)**2 + (yy-B1Y)**2) <= 25)
                 begin
                 BallSpriteOn <= 1;
                 end
@@ -38,24 +38,24 @@ module BallSprite(
                         hit<=0;
                         if (Bdir==1)
                             begin
-                                B1X<=B1X-10;
-                                if (B1X<23)
+                                B1X<=B1X+6;
+                                if (B1X>376)
                                     Bdir<=0;
                             end
                         if (Bdir==0)
                             begin
-                                B1X<=B1X+10;
-                                //if (A1X+A1Width+((AcolCount-1)*40)>636)    
-                                   // Adir<=1;
+                                B1X<=B1X-6;
+                                if (B1X<263)
+                                    Bdir<=1;
                             end
                     end
             end
       end
       
-      always @ (posedge Pclk)
-        begin
-        // slow down the alien movement / move aliens left or right
-        if (xx==B1X && yy==B1Y)
-            BallSpriteOn <=1;
-        end
+//      always @ (posedge Pclk)
+//        begin
+//        // slow down the alien movement / move aliens left or right
+//        if (xx==B1X && yy==B1Y)
+//            BallSpriteOn <=1;
+//        end
 endmodule
