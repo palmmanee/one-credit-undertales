@@ -25,21 +25,21 @@ module BeeSprite(
             
     // setup character positions and sizes
     reg [9:0] BeeX = 310; // Bee X start position
-    reg [8:0] BeeY = 310; // Bee Y start position
-    localparam BeeWidth = 32; // Bee width in pixels
-    localparam BeeHeight = 27; // Bee height in pixels
+    reg [8:0] BeeY = 325; // Bee Y start position
+    localparam BeeWidth = 15; // Bee width in pixels
+    localparam BeeHeight = 15; // Bee height in pixels
   
     always @ (posedge Pclk)
     begin
         if (xx==639 && yy==479)
             begin // check for left or right button pressed
-                if (BR == 1 && BeeX<640-BeeWidth)
+                if (BR == 1 && BeeX<389-BeeWidth)
                     BeeX<=BeeX+1;
-                if (BL == 1 && BeeX>1)
+                if (BL == 1 && BeeX>251)
                     BeeX<=BeeX-1;
-                if (BU == 1 && BeeY>BeeHeight)
+                if (BU == 1 && BeeY>271)
                     BeeY<=BeeY-1;
-                if (BD == 1 && BeeY<480)
+                if (BD == 1 && BeeY<409-BeeHeight)
                     BeeY<=BeeY+1;
             end    
         if (aactive)

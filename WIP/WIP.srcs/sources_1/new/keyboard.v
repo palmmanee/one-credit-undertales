@@ -92,9 +92,9 @@ module keyboard(
             begin
              s = 1'b1;
             end
-        else if (keycodev[15:8]!=8'b11110000 && keycodev[7:0]==8'b00011001)//space
+        else if (keycodev[15:8]!=8'b11110000 && keycodev[7:0]==8'b00101001)//space
             begin
-             s = 1'b1;
+             space = 1'b1;
             end                                                          
         else
             begin
@@ -102,6 +102,7 @@ module keyboard(
              s = 1'b0;
              a = 1'b0;
              d = 1'b0;
+             space = 1'b0;
             end
     initial
     begin

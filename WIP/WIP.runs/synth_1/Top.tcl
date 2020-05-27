@@ -19,6 +19,7 @@ proc create_report { reportName command } {
 }
 set_param chipscope.maxJobs 2
 set_param xicom.use_bs_reader 1
+set_msg_config -id {Common 17-41} -limit 10000000
 create_project -in_memory -part xc7a35tcpg236-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -37,16 +38,30 @@ read_mem {
   C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/RedSoul.mem
   C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/San.mem
   C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/SanPal.mem
+  C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/cursor.mem
+  C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/colorbar.mem
 }
 read_verilog -library xil_defaultlib {
+  C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/BallSprite.v
+  C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/BallSprite2.v
   C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/BeeRom.v
   C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/BeeSprite.v
+  C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/ColorbarRom.v
+  C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/ColorbarSprite.v
+  C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/CursorRom.v
+  C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/CursorSprite.v
+  C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/FightFrameSprite.v
   C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/FrameSprite.v
+  C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/Hp2Sprite.v
+  C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/HpSprite.v
   C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/PS2Receiver.v
+  C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/PivotSprite.v
   C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/SanRom.v
   C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/SanSprite.v
+  C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/clkDivide.v
   C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/debouncer.v
   C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/keyboard.v
+  C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/segmentDriver.v
   C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/vga640x480.v
   C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/Top.v
 }

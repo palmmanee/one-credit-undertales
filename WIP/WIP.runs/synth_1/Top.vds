@@ -2,28 +2,27 @@
 # Vivado v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Tue May 26 21:15:50 2020
-# Process ID: 28572
+# Start of session at: Wed May 27 16:49:44 2020
+# Process ID: 7776
 # Current directory: C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.runs/synth_1
 # Command line: vivado.exe -log Top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Top.tcl
 # Log file: C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.runs/synth_1/Top.vds
 # Journal file: C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source Top.tcl -notrace
-create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 326.922 ; gain = 32.082
 Command: synth_design -top Top -part xc7a35tcpg236-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 33180 
+INFO: Helper process launched with PID 27068 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:17 ; elapsed = 00:00:26 . Memory (MB): peak = 855.535 ; gain = 235.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 854.313 ; gain = 234.441
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'Top' [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/Top.v:8]
-INFO: [Synth 8-3876] $readmem data file 'pal24bit.mem' is read successfully [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/Top.v:57]
-INFO: [Synth 8-3876] $readmem data file 'SanPal.mem' is read successfully [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/Top.v:64]
+INFO: [Synth 8-3876] $readmem data file 'pal24bit.mem' is read successfully [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/Top.v:108]
+INFO: [Synth 8-3876] $readmem data file 'SanPal.mem' is read successfully [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/Top.v:115]
 INFO: [Synth 8-6157] synthesizing module 'keyboard' [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/keyboard.v:22]
 INFO: [Synth 8-6157] synthesizing module 'PS2Receiver' [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/PS2Receiver.v:22]
 INFO: [Synth 8-6157] synthesizing module 'debouncer' [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/debouncer.v:23]
@@ -34,7 +33,6 @@ INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Nai/
 INFO: [Synth 8-6155] done synthesizing module 'PS2Receiver' (2#1) [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/PS2Receiver.v:22]
 WARNING: [Synth 8-567] referenced signal 'keycodev' should be on the sensitivity list [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/keyboard.v:59]
 WARNING: [Synth 8-6014] Unused sequential element start_reg was removed.  [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/keyboard.v:73]
-WARNING: [Synth 8-3848] Net space in module/entity keyboard does not have driver. [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/keyboard.v:30]
 INFO: [Synth 8-6155] done synthesizing module 'keyboard' (3#1) [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/keyboard.v:22]
 INFO: [Synth 8-6157] synthesizing module 'vga640x480' [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/vga640x480.v:9]
 	Parameter HACTIVE bound to: 640 - type: integer 
@@ -52,30 +50,84 @@ INFO: [Synth 8-6157] synthesizing module 'vga640x480' [C:/Users/Nai/Desktop/one-
 	Parameter VSYNCEND bound to: 514 - type: integer 
 	Parameter SCREENEND bound to: 524 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'vga640x480' (4#1) [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/vga640x480.v:9]
+INFO: [Synth 8-6157] synthesizing module 'CursorSprite' [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/CursorSprite.v:23]
+	Parameter C1Width bound to: 15 - type: integer 
+	Parameter C1Height bound to: 15 - type: integer 
+	Parameter C2Width bound to: 15 - type: integer 
+	Parameter C2Height bound to: 15 - type: integer 
+	Parameter C3Width bound to: 15 - type: integer 
+	Parameter C3Height bound to: 15 - type: integer 
+	Parameter C4Width bound to: 15 - type: integer 
+	Parameter C4Height bound to: 15 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'CursorRom' [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/CursorRom.v:22]
+INFO: [Synth 8-5534] Detected attribute (* ROM_STYLE = "block" *) [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/CursorRom.v:37]
+INFO: [Synth 8-3876] $readmem data file 'Cursor.mem' is read successfully [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/CursorRom.v:40]
+INFO: [Synth 8-6155] done synthesizing module 'CursorRom' (5#1) [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/CursorRom.v:22]
+WARNING: [Synth 8-5788] Register sel_reg in module CursorSprite is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/CursorSprite.v:78]
+INFO: [Synth 8-6155] done synthesizing module 'CursorSprite' (6#1) [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/CursorSprite.v:23]
+INFO: [Synth 8-6157] synthesizing module 'FightFrameSprite' [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/FightFrameSprite.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'FightFrameSprite' (7#1) [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/FightFrameSprite.v:22]
+INFO: [Synth 8-6157] synthesizing module 'ColorbarSprite' [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/ColorbarSprite.v:23]
+	Parameter CWidth bound to: 338 - type: integer 
+	Parameter CHeight bound to: 15 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'ColorbarRom' [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/ColorbarRom.v:23]
+INFO: [Synth 8-5534] Detected attribute (* ROM_STYLE = "block" *) [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/ColorbarRom.v:29]
+INFO: [Synth 8-3876] $readmem data file 'colorbar.mem' is read successfully [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/ColorbarRom.v:32]
+INFO: [Synth 8-6155] done synthesizing module 'ColorbarRom' (8#1) [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/ColorbarRom.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'ColorbarSprite' (9#1) [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/ColorbarSprite.v:23]
+INFO: [Synth 8-6157] synthesizing module 'PivotSprite' [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/PivotSprite.v:23]
+	Parameter PWidth bound to: 6 - type: integer 
+	Parameter PHeight bound to: 130 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'PivotSprite' (10#1) [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/PivotSprite.v:23]
+INFO: [Synth 8-6157] synthesizing module 'segmentDriver' [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/segmentDriver.v:21]
+INFO: [Synth 8-6157] synthesizing module 'clkDivide' [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/clkDivide.v:23]
+	Parameter bitDiv bound to: 22 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'flipflop' [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/clkDivide.v:44]
+INFO: [Synth 8-6155] done synthesizing module 'flipflop' (11#1) [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/clkDivide.v:44]
+WARNING: [Synth 8-567] referenced signal 'bit' should be on the sensitivity list [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/clkDivide.v:39]
+INFO: [Synth 8-6155] done synthesizing module 'clkDivide' (12#1) [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/clkDivide.v:23]
+INFO: [Synth 8-6157] synthesizing module 'hexToSegment' [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/segmentDriver.v:57]
+INFO: [Synth 8-6155] done synthesizing module 'hexToSegment' (13#1) [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/segmentDriver.v:57]
+WARNING: [Synth 8-567] referenced signal 'hex' should be on the sensitivity list [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/segmentDriver.v:39]
+INFO: [Synth 8-6155] done synthesizing module 'segmentDriver' (14#1) [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/segmentDriver.v:21]
 INFO: [Synth 8-6157] synthesizing module 'BeeSprite' [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/BeeSprite.v:9]
-	Parameter BeeWidth bound to: 32 - type: integer 
-	Parameter BeeHeight bound to: 27 - type: integer 
+	Parameter BeeWidth bound to: 15 - type: integer 
+	Parameter BeeHeight bound to: 15 - type: integer 
 INFO: [Synth 8-6157] synthesizing module 'BeeRom' [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/BeeRom.v:9]
 INFO: [Synth 8-5534] Detected attribute (* ROM_STYLE = "block" *) [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/BeeRom.v:15]
 INFO: [Synth 8-3876] $readmem data file 'RedSoul.mem' is read successfully [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/BeeRom.v:18]
-INFO: [Synth 8-6155] done synthesizing module 'BeeRom' (5#1) [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/BeeRom.v:9]
-INFO: [Synth 8-6155] done synthesizing module 'BeeSprite' (6#1) [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/BeeSprite.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'BeeRom' (15#1) [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/BeeRom.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'BeeSprite' (16#1) [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/BeeSprite.v:9]
 INFO: [Synth 8-6157] synthesizing module 'FrameSprite' [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/FrameSprite.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'FrameSprite' (7#1) [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/FrameSprite.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'FrameSprite' (17#1) [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/FrameSprite.v:1]
+INFO: [Synth 8-6157] synthesizing module 'HpSprite' [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/HpSprite.v:1]
+	Parameter Hp bound to: 200 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'HpSprite' (18#1) [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/HpSprite.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Hp2Sprite' [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/Hp2Sprite.v:1]
+	Parameter Hp bound to: 200 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Hp2Sprite' (19#1) [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/Hp2Sprite.v:1]
+INFO: [Synth 8-6157] synthesizing module 'BallSprite' [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/BallSprite.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'BallSprite' (20#1) [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/BallSprite.v:1]
+INFO: [Synth 8-6157] synthesizing module 'BallSprite2' [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/BallSprite2.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'BallSprite2' (21#1) [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/BallSprite2.v:1]
 INFO: [Synth 8-6157] synthesizing module 'SanSprite' [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/SanSprite.v:9]
 	Parameter SanWidth bound to: 120 - type: integer 
 	Parameter SanHeight bound to: 190 - type: integer 
 INFO: [Synth 8-6157] synthesizing module 'SanRom' [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/SanRom.v:9]
 INFO: [Synth 8-5534] Detected attribute (* ROM_STYLE = "block" *) [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/SanRom.v:15]
 INFO: [Synth 8-3876] $readmem data file 'San.mem' is read successfully [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/SanRom.v:18]
-INFO: [Synth 8-6155] done synthesizing module 'SanRom' (8#1) [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/SanRom.v:9]
-INFO: [Synth 8-6155] done synthesizing module 'SanSprite' (9#1) [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/SanSprite.v:9]
-WARNING: [Synth 8-3848] Net BallSpriteOn in module/entity Top does not have driver. [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/Top.v:38]
-INFO: [Synth 8-6155] done synthesizing module 'Top' (10#1) [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/Top.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'SanRom' (22#1) [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/SanRom.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'SanSprite' (23#1) [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/SanSprite.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'Top' (24#1) [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/Top.v:8]
+WARNING: [Synth 8-3331] design BallSprite2 has unconnected port aactive
+WARNING: [Synth 8-3331] design BallSprite has unconnected port aactive
+WARNING: [Synth 8-3331] design Hp2Sprite has unconnected port aactive
+WARNING: [Synth 8-3331] design HpSprite has unconnected port aactive
 WARNING: [Synth 8-3331] design FrameSprite has unconnected port aactive
-WARNING: [Synth 8-3331] design keyboard has unconnected port space
+WARNING: [Synth 8-3331] design PivotSprite has unconnected port aactive
+WARNING: [Synth 8-3331] design FightFrameSprite has unconnected port aactive
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:24 ; elapsed = 00:00:37 . Memory (MB): peak = 929.285 ; gain = 308.750
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 938.199 ; gain = 318.328
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -88,12 +140,12 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:26 ; elapsed = 00:00:40 . Memory (MB): peak = 929.285 ; gain = 308.750
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 938.199 ; gain = 318.328
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:26 ; elapsed = 00:00:40 . Memory (MB): peak = 929.285 ; gain = 308.750
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 938.199 ; gain = 318.328
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.037 . Memory (MB): peak = 929.285 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 938.199 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -129,114 +181,78 @@ Resolution: If [get_<value>] was used to populate the object, check to make sure
 WARNING: [Vivado 12-584] No ports matched 'tx'. [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/constrs_1/new/basys3.xdc:43]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/constrs_1/new/basys3.xdc:43]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'seg[0]'. [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/constrs_1/new/basys3.xdc:55]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/constrs_1/new/basys3.xdc:55]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'seg[0]'. [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/constrs_1/new/basys3.xdc:56]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/constrs_1/new/basys3.xdc:56]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'seg[1]'. [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/constrs_1/new/basys3.xdc:57]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/constrs_1/new/basys3.xdc:57]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'seg[1]'. [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/constrs_1/new/basys3.xdc:58]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/constrs_1/new/basys3.xdc:58]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'seg[2]'. [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/constrs_1/new/basys3.xdc:59]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/constrs_1/new/basys3.xdc:59]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'seg[2]'. [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/constrs_1/new/basys3.xdc:60]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/constrs_1/new/basys3.xdc:60]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'seg[3]'. [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/constrs_1/new/basys3.xdc:61]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/constrs_1/new/basys3.xdc:61]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'seg[3]'. [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/constrs_1/new/basys3.xdc:62]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/constrs_1/new/basys3.xdc:62]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'seg[4]'. [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/constrs_1/new/basys3.xdc:63]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/constrs_1/new/basys3.xdc:63]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'seg[4]'. [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/constrs_1/new/basys3.xdc:64]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/constrs_1/new/basys3.xdc:64]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'seg[5]'. [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/constrs_1/new/basys3.xdc:65]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/constrs_1/new/basys3.xdc:65]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'seg[5]'. [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/constrs_1/new/basys3.xdc:66]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/constrs_1/new/basys3.xdc:66]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'seg[6]'. [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/constrs_1/new/basys3.xdc:67]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/constrs_1/new/basys3.xdc:67]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'seg[6]'. [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/constrs_1/new/basys3.xdc:68]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/constrs_1/new/basys3.xdc:68]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'dp'. [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/constrs_1/new/basys3.xdc:70]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/constrs_1/new/basys3.xdc:70]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 WARNING: [Vivado 12-584] No ports matched 'dp'. [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/constrs_1/new/basys3.xdc:71]
 CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/constrs_1/new/basys3.xdc:71]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'an[0]'. [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/constrs_1/new/basys3.xdc:73]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/constrs_1/new/basys3.xdc:73]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'an[0]'. [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/constrs_1/new/basys3.xdc:74]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/constrs_1/new/basys3.xdc:74]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'an[1]'. [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/constrs_1/new/basys3.xdc:75]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/constrs_1/new/basys3.xdc:75]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'an[1]'. [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/constrs_1/new/basys3.xdc:76]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/constrs_1/new/basys3.xdc:76]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'an[2]'. [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/constrs_1/new/basys3.xdc:77]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/constrs_1/new/basys3.xdc:77]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'an[2]'. [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/constrs_1/new/basys3.xdc:78]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/constrs_1/new/basys3.xdc:78]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'an[3]'. [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/constrs_1/new/basys3.xdc:79]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/constrs_1/new/basys3.xdc:79]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-WARNING: [Vivado 12-584] No ports matched 'an[3]'. [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/constrs_1/new/basys3.xdc:80]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/constrs_1/new/basys3.xdc:80]
-Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
 Finished Parsing XDC File [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/constrs_1/new/basys3.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/constrs_1/new/basys3.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Top_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/Top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1040.770 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1048.363 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.151 . Memory (MB): peak = 1040.770 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.038 . Memory (MB): peak = 1048.363 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:48 ; elapsed = 00:01:32 . Memory (MB): peak = 1040.770 ; gain = 420.234
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 1048.363 ; gain = 428.492
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:48 ; elapsed = 00:01:32 . Memory (MB): peak = 1040.770 ; gain = 420.234
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 1048.363 ; gain = 428.492
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:48 ; elapsed = 00:01:32 . Memory (MB): peak = 1040.770 ; gain = 420.234
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 1048.363 ; gain = 428.492
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-7031] Trying to map ROM "Cmemory_array" into Block RAM due to explicit "ram_style" or "rom_style" specification
+INFO: [Synth 8-7031] Trying to map ROM "memory_array" into Block RAM due to explicit "ram_style" or "rom_style" specification
+INFO: [Synth 8-802] inferred FSM for state register 'Adir_reg' in module 'PivotSprite'
 INFO: [Synth 8-7031] Trying to map ROM "memory_array" into Block RAM due to explicit "ram_style" or "rom_style" specification
 INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/BeeSprite.v:38]
 INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/BeeSprite.v:42]
+INFO: [Synth 8-802] inferred FSM for state register 'Bdir_reg' in module 'BallSprite'
+INFO: [Synth 8-802] inferred FSM for state register 'Bdir_reg' in module 'BallSprite2'
 INFO: [Synth 8-7031] Trying to map ROM "memory_array" into Block RAM due to explicit "ram_style" or "rom_style" specification
 WARNING: [Synth 8-327] inferring latch for variable 'w_reg' [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/keyboard.v:89]
 WARNING: [Synth 8-327] inferring latch for variable 's_reg' [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/keyboard.v:93]
 WARNING: [Synth 8-327] inferring latch for variable 'a_reg' [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/keyboard.v:81]
 WARNING: [Synth 8-327] inferring latch for variable 'd_reg' [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/keyboard.v:85]
+WARNING: [Synth 8-327] inferring latch for variable 'space_reg' [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/keyboard.v:97]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE0 |                                0 |                               01
+*
+                  iSTATE |                                1 |                               00
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'Adir_reg' using encoding 'sequential' in module 'PivotSprite'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE0 |                                0 |                               01
+*
+                  iSTATE |                                1 |                               00
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'Bdir_reg' using encoding 'sequential' in module 'BallSprite'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE0 |                                0 |                               01
+*
+                  iSTATE |                                1 |                               00
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'Bdir_reg' using encoding 'sequential' in module 'BallSprite2'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:54 ; elapsed = 00:01:41 . Memory (MB): peak = 1040.770 ; gain = 420.234
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 1048.363 ; gain = 428.492
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -249,33 +265,44 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     32 Bit       Adders := 5     
+	   2 Input     32 Bit       Adders := 6     
+	   3 Input     32 Bit       Adders := 2     
 	   2 Input     17 Bit       Adders := 1     
 	   3 Input     12 Bit       Adders := 1     
+	   2 Input     11 Bit       Adders := 1     
 	   3 Input     11 Bit       Adders := 1     
-	   2 Input     10 Bit       Adders := 4     
+	   2 Input     10 Bit       Adders := 14    
 	   2 Input      9 Bit       Adders := 1     
 	   2 Input      5 Bit       Adders := 2     
 	   2 Input      4 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
 +---Registers : 
-	               16 Bit    Registers := 3     
-	               10 Bit    Registers := 4     
+	               16 Bit    Registers := 4     
+	               10 Bit    Registers := 14    
 	                9 Bit    Registers := 1     
 	                8 Bit    Registers := 2     
-	                7 Bit    Registers := 2     
+	                7 Bit    Registers := 6     
+	                6 Bit    Registers := 1     
 	                5 Bit    Registers := 2     
 	                4 Bit    Registers := 4     
-	                1 Bit    Registers := 12    
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 44    
 +---Multipliers : 
-	                32x32  Multipliers := 2     
+	                32x32  Multipliers := 4     
 +---ROMs : 
-	                              ROMs := 2     
+	                              ROMs := 7     
 +---Muxes : 
+	   6 Input     16 Bit        Muxes := 1     
+	   5 Input     16 Bit        Muxes := 1     
+	   4 Input     16 Bit        Muxes := 1     
 	   2 Input     10 Bit        Muxes := 4     
-	   2 Input      4 Bit        Muxes := 5     
-	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 15    
-	   3 Input      1 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 6     
+	   4 Input      4 Bit        Muxes := 2     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 24    
+	   3 Input      1 Bit        Muxes := 2     
 	  12 Input      1 Bit        Muxes := 2     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -286,15 +313,11 @@ Start RTL Hierarchical Component Statistics
 Hierarchical RTL Component report 
 Module Top 
 Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     32 Bit       Adders := 3     
 +---Registers : 
 	                4 Bit    Registers := 3     
-+---Multipliers : 
-	                32x32  Multipliers := 2     
 +---Muxes : 
-	   2 Input      4 Bit        Muxes := 4     
-	   2 Input      1 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 1     
 Module debouncer 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -336,6 +359,64 @@ Detailed RTL Component Info :
 +---Muxes : 
 	   2 Input     10 Bit        Muxes := 4     
 	   2 Input      1 Bit        Muxes := 3     
+Module CursorRom 
+Detailed RTL Component Info : 
++---Registers : 
+	                7 Bit    Registers := 1     
++---ROMs : 
+	                              ROMs := 1     
+Module CursorSprite 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     10 Bit       Adders := 4     
++---Registers : 
+	               10 Bit    Registers := 4     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   4 Input      2 Bit        Muxes := 1     
+Module FightFrameSprite 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module ColorbarRom 
+Detailed RTL Component Info : 
++---Registers : 
+	                6 Bit    Registers := 1     
++---ROMs : 
+	                              ROMs := 1     
+Module ColorbarSprite 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module PivotSprite 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     11 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 2     
++---Registers : 
+	               16 Bit    Registers := 1     
+	               10 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   6 Input     16 Bit        Muxes := 1     
+	   5 Input     16 Bit        Muxes := 1     
+	   4 Input     16 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module flipflop 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module segmentDriver 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      4 Bit        Muxes := 2     
 Module BeeRom 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -361,6 +442,44 @@ Module FrameSprite
 Detailed RTL Component Info : 
 +---Registers : 
 	                1 Bit    Registers := 1     
+Module HpSprite 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module Hp2Sprite 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module BallSprite 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 2     
+	   3 Input     32 Bit       Adders := 1     
+	   2 Input     10 Bit       Adders := 2     
++---Registers : 
+	               10 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
++---Multipliers : 
+	                32x32  Multipliers := 2     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+Module BallSprite2 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     32 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 2     
+	   2 Input     10 Bit       Adders := 2     
++---Registers : 
+	               10 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
++---Multipliers : 
+	                32x32  Multipliers := 2     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
 Module SanRom 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -387,32 +506,65 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/Top.v:95]
-INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/Top.v:95]
-DSP Report: Generating DSP BLUE2, operation Mode is: A*B.
-DSP Report: operator BLUE2 is absorbed into DSP BLUE2.
-DSP Report: operator BLUE2 is absorbed into DSP BLUE2.
-DSP Report: Generating DSP BLUE2, operation Mode is: (PCIN>>17)+A*B.
-DSP Report: operator BLUE2 is absorbed into DSP BLUE2.
-DSP Report: operator BLUE2 is absorbed into DSP BLUE2.
-DSP Report: Generating DSP BLUE2, operation Mode is: A*B.
-DSP Report: operator BLUE2 is absorbed into DSP BLUE2.
-DSP Report: operator BLUE2 is absorbed into DSP BLUE2.
-DSP Report: Generating DSP BLUE2, operation Mode is: (PCIN>>17)+A*B.
-DSP Report: operator BLUE2 is absorbed into DSP BLUE2.
-DSP Report: operator BLUE2 is absorbed into DSP BLUE2.
-DSP Report: Generating DSP BLUE2, operation Mode is: A*B.
-DSP Report: operator BLUE2 is absorbed into DSP BLUE2.
-DSP Report: operator BLUE2 is absorbed into DSP BLUE2.
-DSP Report: Generating DSP BLUE2, operation Mode is: (PCIN>>17)+A*B.
-DSP Report: operator BLUE2 is absorbed into DSP BLUE2.
-DSP Report: operator BLUE2 is absorbed into DSP BLUE2.
-DSP Report: Generating DSP BLUE2, operation Mode is: A*B.
-DSP Report: operator BLUE2 is absorbed into DSP BLUE2.
-DSP Report: operator BLUE2 is absorbed into DSP BLUE2.
-DSP Report: Generating DSP BLUE2, operation Mode is: (PCIN>>17)+A*B.
-DSP Report: operator BLUE2 is absorbed into DSP BLUE2.
-DSP Report: operator BLUE2 is absorbed into DSP BLUE2.
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/BallSprite.v:19]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/BallSprite.v:19]
+DSP Report: Generating DSP BallSpriteOn2, operation Mode is: A*B.
+DSP Report: operator BallSpriteOn2 is absorbed into DSP BallSpriteOn2.
+DSP Report: operator BallSpriteOn2 is absorbed into DSP BallSpriteOn2.
+DSP Report: Generating DSP BallSpriteOn2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator BallSpriteOn2 is absorbed into DSP BallSpriteOn2.
+DSP Report: operator BallSpriteOn2 is absorbed into DSP BallSpriteOn2.
+DSP Report: Generating DSP BallSpriteOn2, operation Mode is: A*B.
+DSP Report: operator BallSpriteOn2 is absorbed into DSP BallSpriteOn2.
+DSP Report: operator BallSpriteOn2 is absorbed into DSP BallSpriteOn2.
+DSP Report: Generating DSP BallSpriteOn2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator BallSpriteOn2 is absorbed into DSP BallSpriteOn2.
+DSP Report: operator BallSpriteOn2 is absorbed into DSP BallSpriteOn2.
+DSP Report: Generating DSP BallSpriteOn2, operation Mode is: A*B.
+DSP Report: operator BallSpriteOn2 is absorbed into DSP BallSpriteOn2.
+DSP Report: operator BallSpriteOn2 is absorbed into DSP BallSpriteOn2.
+DSP Report: Generating DSP BallSpriteOn2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator BallSpriteOn2 is absorbed into DSP BallSpriteOn2.
+DSP Report: operator BallSpriteOn2 is absorbed into DSP BallSpriteOn2.
+DSP Report: Generating DSP BallSpriteOn2, operation Mode is: A*B.
+DSP Report: operator BallSpriteOn2 is absorbed into DSP BallSpriteOn2.
+DSP Report: operator BallSpriteOn2 is absorbed into DSP BallSpriteOn2.
+DSP Report: Generating DSP BallSpriteOn2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator BallSpriteOn2 is absorbed into DSP BallSpriteOn2.
+DSP Report: operator BallSpriteOn2 is absorbed into DSP BallSpriteOn2.
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/BallSprite2.v:19]
+INFO: [Synth 8-5845] Not enough pipeline registers after wide multiplier. Recommended levels of pipeline registers is 4 [C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.srcs/sources_1/new/BallSprite2.v:19]
+DSP Report: Generating DSP BallSprite2On2, operation Mode is: A*B.
+DSP Report: operator BallSprite2On2 is absorbed into DSP BallSprite2On2.
+DSP Report: operator BallSprite2On2 is absorbed into DSP BallSprite2On2.
+DSP Report: Generating DSP BallSprite2On2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator BallSprite2On2 is absorbed into DSP BallSprite2On2.
+DSP Report: operator BallSprite2On2 is absorbed into DSP BallSprite2On2.
+DSP Report: Generating DSP BallSprite2On2, operation Mode is: A*B.
+DSP Report: operator BallSprite2On2 is absorbed into DSP BallSprite2On2.
+DSP Report: operator BallSprite2On2 is absorbed into DSP BallSprite2On2.
+DSP Report: Generating DSP BallSprite2On2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator BallSprite2On2 is absorbed into DSP BallSprite2On2.
+DSP Report: operator BallSprite2On2 is absorbed into DSP BallSprite2On2.
+DSP Report: Generating DSP BallSprite2On2, operation Mode is: A*B.
+DSP Report: operator BallSprite2On2 is absorbed into DSP BallSprite2On2.
+DSP Report: operator BallSprite2On2 is absorbed into DSP BallSprite2On2.
+DSP Report: Generating DSP BallSprite2On2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator BallSprite2On2 is absorbed into DSP BallSprite2On2.
+DSP Report: operator BallSprite2On2 is absorbed into DSP BallSprite2On2.
+DSP Report: Generating DSP BallSprite2On2, operation Mode is: A*B.
+DSP Report: operator BallSprite2On2 is absorbed into DSP BallSprite2On2.
+DSP Report: operator BallSprite2On2 is absorbed into DSP BallSprite2On2.
+DSP Report: Generating DSP BallSprite2On2, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator BallSprite2On2 is absorbed into DSP BallSprite2On2.
+DSP Report: operator BallSprite2On2 is absorbed into DSP BallSprite2On2.
+WARNING: [Synth 8-3331] design BallSprite2 has unconnected port aactive
+WARNING: [Synth 8-3331] design BallSprite has unconnected port aactive
+WARNING: [Synth 8-3331] design Hp2Sprite has unconnected port aactive
+WARNING: [Synth 8-3331] design HpSprite has unconnected port aactive
+WARNING: [Synth 8-3331] design FrameSprite has unconnected port aactive
+WARNING: [Synth 8-3331] design PivotSprite has unconnected port aactive
+WARNING: [Synth 8-3331] design FightFrameSprite has unconnected port aactive
 INFO: [Synth 8-3886] merging instance 'kb/uut/dataprev_reg[0]' (FDE) to 'kb/uut/keycode_reg[0]'
 INFO: [Synth 8-3886] merging instance 'kb/uut/dataprev_reg[1]' (FDE) to 'kb/uut/keycode_reg[1]'
 INFO: [Synth 8-3886] merging instance 'kb/uut/dataprev_reg[2]' (FDE) to 'kb/uut/keycode_reg[2]'
@@ -421,8 +573,21 @@ INFO: [Synth 8-3886] merging instance 'kb/uut/dataprev_reg[4]' (FDE) to 'kb/uut/
 INFO: [Synth 8-3886] merging instance 'kb/uut/dataprev_reg[5]' (FDE) to 'kb/uut/keycode_reg[5]'
 INFO: [Synth 8-3886] merging instance 'kb/uut/dataprev_reg[6]' (FDE) to 'kb/uut/keycode_reg[6]'
 INFO: [Synth 8-3886] merging instance 'kb/uut/dataprev_reg[7]' (FDE) to 'kb/uut/keycode_reg[7]'
+INFO: [Synth 8-3886] merging instance 'PivotDisplay/dmg_reg[4]' (FDRE) to 'PivotDisplay/dmg_reg[8]'
+INFO: [Synth 8-3886] merging instance 'PivotDisplay/dmg_reg[8]' (FDRE) to 'PivotDisplay/dmg_reg[12]'
+INFO: [Synth 8-3886] merging instance 'PivotDisplay/dmg_reg[12]' (FDRE) to 'PivotDisplay/dmg_reg[5]'
+INFO: [Synth 8-3886] merging instance 'PivotDisplay/dmg_reg[1]' (FDRE) to 'PivotDisplay/dmg_reg[3]'
+INFO: [Synth 8-3886] merging instance 'PivotDisplay/dmg_reg[5]' (FDRE) to 'PivotDisplay/dmg_reg[9]'
+INFO: [Synth 8-3886] merging instance 'PivotDisplay/dmg_reg[9]' (FDRE) to 'PivotDisplay/dmg_reg[13]'
+INFO: [Synth 8-3886] merging instance 'PivotDisplay/dmg_reg[13]' (FDRE) to 'PivotDisplay/dmg_reg[6]'
+INFO: [Synth 8-3886] merging instance 'PivotDisplay/dmg_reg[6]' (FDRE) to 'PivotDisplay/dmg_reg[10]'
+INFO: [Synth 8-3886] merging instance 'PivotDisplay/dmg_reg[10]' (FDRE) to 'PivotDisplay/dmg_reg[14]'
+INFO: [Synth 8-3886] merging instance 'PivotDisplay/dmg_reg[14]' (FDRE) to 'PivotDisplay/dmg_reg[7]'
+INFO: [Synth 8-3886] merging instance 'PivotDisplay/dmg_reg[7]' (FDRE) to 'PivotDisplay/dmg_reg[11]'
+INFO: [Synth 8-3886] merging instance 'PivotDisplay/dmg_reg[11]' (FDRE) to 'PivotDisplay/dmg_reg[15]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\PivotDisplay/dmg_reg[15] )
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:17 ; elapsed = 00:02:10 . Memory (MB): peak = 1040.770 ; gain = 420.234
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:36 . Memory (MB): peak = 1048.363 ; gain = 428.492
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -444,6 +609,35 @@ ROM:
 |Top         | p_0_out    | 256x8         | LUT            | 
 |Top         | p_0_out    | 256x8         | LUT            | 
 |Top         | p_0_out    | 256x8         | LUT            | 
+|Top         | p_0_out    | 256x8         | LUT            | 
+|Top         | p_0_out    | 256x8         | LUT            | 
+|Top         | p_0_out    | 256x8         | LUT            | 
+|Top         | p_0_out    | 256x8         | LUT            | 
+|Top         | p_0_out    | 256x8         | LUT            | 
+|Top         | p_0_out    | 256x8         | LUT            | 
+|Top         | p_0_out    | 256x8         | LUT            | 
+|Top         | p_0_out    | 256x8         | LUT            | 
+|Top         | p_0_out    | 256x8         | LUT            | 
+|Top         | p_0_out    | 256x8         | LUT            | 
+|Top         | p_0_out    | 256x8         | LUT            | 
+|Top         | p_0_out    | 256x8         | LUT            | 
+|Top         | p_0_out    | 256x8         | LUT            | 
+|Top         | p_0_out    | 256x8         | LUT            | 
+|Top         | p_0_out    | 256x8         | LUT            | 
+|Top         | p_0_out    | 256x8         | LUT            | 
+|Top         | p_0_out    | 256x8         | LUT            | 
+|Top         | p_0_out    | 256x8         | LUT            | 
+|Top         | p_0_out    | 256x8         | LUT            | 
+|Top         | p_0_out    | 256x8         | LUT            | 
+|Top         | p_0_out    | 256x8         | LUT            | 
+|Top         | p_0_out    | 256x8         | LUT            | 
+|Top         | p_0_out    | 256x8         | LUT            | 
+|Top         | p_0_out    | 256x8         | LUT            | 
+|Top         | p_0_out    | 256x8         | LUT            | 
+|Top         | p_0_out    | 256x8         | LUT            | 
+|Top         | p_0_out    | 256x8         | LUT            | 
+|Top         | p_0_out    | 256x8         | LUT            | 
+|Top         | p_0_out    | 256x8         | LUT            | 
 +------------+------------+---------------+----------------+
 
 
@@ -451,14 +645,22 @@ DSP: Preliminary Mapping	Report (see note below)
 +------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 |Module Name | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
 +------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|Top         | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|Top         | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|Top         | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|Top         | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|Top         | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|Top         | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|Top         | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|Top         | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|BallSprite  | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|BallSprite  | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|BallSprite  | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|BallSprite  | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|BallSprite  | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|BallSprite  | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|BallSprite  | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|BallSprite  | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|BallSprite2 | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|BallSprite2 | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|BallSprite2 | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|BallSprite2 | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|BallSprite2 | A*B            | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|BallSprite2 | (PCIN>>17)+A*B | 16     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|BallSprite2 | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|BallSprite2 | (PCIN>>17)+A*B | 18     | 16     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
 +------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 
 Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
@@ -475,13 +677,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:43 ; elapsed = 00:02:40 . Memory (MB): peak = 1085.012 ; gain = 464.477
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:46 ; elapsed = 00:00:50 . Memory (MB): peak = 1097.695 ; gain = 477.824
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:47 ; elapsed = 00:02:44 . Memory (MB): peak = 1108.180 ; gain = 487.645
+Finished Timing Optimization : Time (s): cpu = 00:00:47 ; elapsed = 00:00:51 . Memory (MB): peak = 1123.055 ; gain = 503.184
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -492,6 +694,12 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-7053] The timing for the instance CursorDisplay/Cursor1VRom/o_Cdata_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7053] The timing for the instance CursorDisplay/Cursor1VRom/o_Cdata_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7053] The timing for the instance CursorDisplay/Cursor3VRom/o_Cdata_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7053] The timing for the instance CursorDisplay/Cursor3VRom/o_Cdata_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7053] The timing for the instance ColorbarDisplay/ColorVRom/o_data_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7053] The timing for the instance ColorbarDisplay/ColorVRom/o_data_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7053] The timing for the instance BeeDisplay/BeeVRom/o_data_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7053] The timing for the instance SanDisplay/SanVRom/o_data_reg_0_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7053] The timing for the instance SanDisplay/SanVRom/o_data_reg_0_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
@@ -501,7 +709,7 @@ INFO: [Synth 8-7053] The timing for the instance SanDisplay/SanVRom/o_data_reg_0
 INFO: [Synth 8-7053] The timing for the instance SanDisplay/SanVRom/o_data_reg_0_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7053] The timing for the instance SanDisplay/SanVRom/o_data_reg_0_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:48 ; elapsed = 00:02:46 . Memory (MB): peak = 1113.723 ; gain = 493.188
+Finished Technology Mapping : Time (s): cpu = 00:00:49 ; elapsed = 00:00:53 . Memory (MB): peak = 1128.914 ; gain = 509.043
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -525,13 +733,13 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:57 ; elapsed = 00:02:55 . Memory (MB): peak = 1118.527 ; gain = 497.992
+Finished IO Insertion : Time (s): cpu = 00:00:53 ; elapsed = 00:00:57 . Memory (MB): peak = 1133.715 ; gain = 513.844
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:57 ; elapsed = 00:02:55 . Memory (MB): peak = 1118.527 ; gain = 497.992
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:53 ; elapsed = 00:00:57 . Memory (MB): peak = 1133.715 ; gain = 513.844
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -550,25 +758,25 @@ Report Check Netlist:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:57 ; elapsed = 00:02:56 . Memory (MB): peak = 1118.527 ; gain = 497.992
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:54 ; elapsed = 00:00:58 . Memory (MB): peak = 1133.715 ; gain = 513.844
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:57 ; elapsed = 00:02:56 . Memory (MB): peak = 1118.527 ; gain = 497.992
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:54 ; elapsed = 00:00:58 . Memory (MB): peak = 1133.715 ; gain = 513.844
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:57 ; elapsed = 00:02:56 . Memory (MB): peak = 1118.527 ; gain = 497.992
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:54 ; elapsed = 00:00:58 . Memory (MB): peak = 1133.715 ; gain = 513.844
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:57 ; elapsed = 00:02:56 . Memory (MB): peak = 1118.527 ; gain = 497.992
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:54 ; elapsed = 00:00:58 . Memory (MB): peak = 1133.715 ; gain = 513.844
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -585,17 +793,17 @@ Report Cell Usage:
 |      |Cell       |Count |
 +------+-----------+------+
 |1     |BUFG       |     3|
-|2     |CARRY4     |    50|
-|3     |DSP48E1    |     6|
-|4     |LUT1       |    17|
-|5     |LUT2       |   146|
-|6     |LUT3       |    25|
-|7     |LUT4       |    63|
-|8     |LUT5       |    81|
-|9     |LUT6       |   209|
-|10    |MUXF7      |    16|
-|11    |MUXF8      |     4|
-|12    |RAMB18E1   |     1|
+|2     |CARRY4     |    99|
+|3     |DSP48E1    |    12|
+|4     |LUT1       |    51|
+|5     |LUT2       |   306|
+|6     |LUT3       |    66|
+|7     |LUT4       |   108|
+|8     |LUT5       |   153|
+|9     |LUT6       |   516|
+|10    |MUXF7      |    14|
+|11    |RAMB18E1   |     3|
+|12    |RAMB18E1_1 |     1|
 |13    |RAMB36E1   |     1|
 |14    |RAMB36E1_1 |     1|
 |15    |RAMB36E1_2 |     1|
@@ -603,55 +811,89 @@ Report Cell Usage:
 |17    |RAMB36E1_4 |     1|
 |18    |RAMB36E1_5 |     1|
 |19    |RAMB36E1_6 |     1|
-|20    |FDRE       |   133|
-|21    |FDSE       |    12|
-|22    |LD         |     3|
-|23    |LDP        |     1|
-|24    |IBUF       |     4|
-|25    |OBUF       |    14|
+|20    |RAMB36E1_7 |     1|
+|21    |FDRE       |   276|
+|22    |FDSE       |    12|
+|23    |LD         |     4|
+|24    |LDP        |     1|
+|25    |IBUF       |     4|
+|26    |OBUF       |    25|
 +------+-----------+------+
 
 Report Instance Areas: 
-+------+---------------+------------+------+
-|      |Instance       |Module      |Cells |
-+------+---------------+------------+------+
-|1     |top            |            |   795|
-|2     |  BeeDisplay   |BeeSprite   |   286|
-|3     |    BeeVRom    |BeeRom      |   102|
-|4     |  FrameDisplay |FrameSprite |     1|
-|5     |  SanDisplay   |SanSprite   |    87|
-|6     |    SanVRom    |SanRom      |    66|
-|7     |  display      |vga640x480  |   159|
-|8     |  kb           |keyboard    |   129|
-|9     |    uut        |PS2Receiver |    93|
-|10    |      db_clk   |debouncer   |    15|
-|11    |      db_data  |debouncer_0 |    16|
-+------+---------------+------------+------+
++------+-----------------------+-----------------+------+
+|      |Instance               |Module           |Cells |
++------+-----------------------+-----------------+------+
+|1     |top                    |                 |  1662|
+|2     |  Ball2Display         |BallSprite2      |   146|
+|3     |  BallDisplay          |BallSprite       |   148|
+|4     |  BeeDisplay           |BeeSprite        |   216|
+|5     |    BeeVRom            |BeeRom           |    40|
+|6     |  ColorbarDisplay      |ColorbarSprite   |    56|
+|7     |    ColorVRom          |ColorbarRom      |    37|
+|8     |  CursorDisplay        |CursorSprite     |   233|
+|9     |    Cursor1VRom        |CursorRom        |    67|
+|10    |    Cursor3VRom        |CursorRom_19     |    70|
+|11    |  FightFrameDisplay    |FightFrameSprite |     1|
+|12    |  FrameDisplay         |FrameSprite      |     1|
+|13    |  Hp2Display           |Hp2Sprite        |     2|
+|14    |  HpDisplay            |HpSprite         |     1|
+|15    |  PivotDisplay         |PivotSprite      |    99|
+|16    |  SanDisplay           |SanSprite        |    92|
+|17    |    SanVRom            |SanRom           |    70|
+|18    |  display              |vga640x480       |   223|
+|19    |  kb                   |keyboard         |   134|
+|20    |    uut                |PS2Receiver      |    93|
+|21    |      db_clk           |debouncer        |    15|
+|22    |      db_data          |debouncer_18     |    16|
+|23    |  sd                   |segmentDriver    |    53|
+|24    |    hts                |hexToSegment     |     7|
+|25    |    cd                 |clkDivide        |    38|
+|26    |      \genblk1[10].ff  |flipflop         |     2|
+|27    |      \genblk1[11].ff  |flipflop_0       |     2|
+|28    |      \genblk1[12].ff  |flipflop_1       |     2|
+|29    |      \genblk1[13].ff  |flipflop_2       |     2|
+|30    |      \genblk1[14].ff  |flipflop_3       |     2|
+|31    |      \genblk1[15].ff  |flipflop_4       |     2|
+|32    |      \genblk1[16].ff  |flipflop_5       |     2|
+|33    |      \genblk1[17].ff  |flipflop_6       |     2|
+|34    |      \genblk1[18].ff  |flipflop_7       |     2|
+|35    |      \genblk1[19].ff  |flipflop_8       |     2|
+|36    |      \genblk1[1].ff   |flipflop_9       |     2|
+|37    |      \genblk1[2].ff   |flipflop_10      |     2|
+|38    |      \genblk1[3].ff   |flipflop_11      |     2|
+|39    |      \genblk1[4].ff   |flipflop_12      |     2|
+|40    |      \genblk1[5].ff   |flipflop_13      |     2|
+|41    |      \genblk1[6].ff   |flipflop_14      |     2|
+|42    |      \genblk1[7].ff   |flipflop_15      |     2|
+|43    |      \genblk1[8].ff   |flipflop_16      |     2|
+|44    |      \genblk1[9].ff   |flipflop_17      |     2|
++------+-----------------------+-----------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:57 ; elapsed = 00:02:56 . Memory (MB): peak = 1118.527 ; gain = 497.992
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:54 ; elapsed = 00:00:58 . Memory (MB): peak = 1133.715 ; gain = 513.844
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 4 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:22 ; elapsed = 00:02:18 . Memory (MB): peak = 1118.527 ; gain = 386.508
-Synthesis Optimization Complete : Time (s): cpu = 00:01:58 ; elapsed = 00:02:57 . Memory (MB): peak = 1118.527 ; gain = 497.992
+Synthesis finished with 0 errors, 0 critical warnings and 12 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:44 ; elapsed = 00:00:55 . Memory (MB): peak = 1133.715 ; gain = 403.680
+Synthesis Optimization Complete : Time (s): cpu = 00:00:54 ; elapsed = 00:00:58 . Memory (MB): peak = 1133.715 ; gain = 513.844
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.073 . Memory (MB): peak = 1118.527 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 88 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.038 . Memory (MB): peak = 1145.777 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 142 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1118.527 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1145.777 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 4 instances were transformed.
-  LD => LDCE: 3 instances
+  A total of 5 instances were transformed.
+  LD => LDCE: 4 instances
   LDP => LDPE: 1 instance 
 
 INFO: [Common 17-83] Releasing license: Synthesis
-61 Infos, 44 Warnings, 34 Critical Warnings and 0 Errors encountered.
+122 Infos, 36 Warnings, 12 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:02:12 ; elapsed = 00:03:25 . Memory (MB): peak = 1118.527 ; gain = 791.605
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1118.527 ; gain = 0.000
+synth_design: Time (s): cpu = 00:01:01 ; elapsed = 00:01:06 . Memory (MB): peak = 1145.777 ; gain = 820.148
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1145.777 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Nai/Desktop/one-credit-undertales/WIP/WIP.runs/synth_1/Top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Top_utilization_synth.rpt -pb Top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue May 26 21:20:12 2020...
+INFO: [Common 17-206] Exiting Vivado at Wed May 27 16:50:54 2020...
