@@ -74,7 +74,6 @@ module PivotSprite(
         end
     always @ (posedge Pclk)
     begin
-        // slow down the alien movement / move aliens left or right
         if (xx==639 && yy==479)
             begin
                 del<=del+1;

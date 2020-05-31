@@ -5,11 +5,10 @@ module Hp2Sprite(
     output reg Hp2SpriteOn, // 1=on, 0=off
     input wire Pclk, // 25MHz pixel clock
     input wire [9:0] dmg
-//    output reg win=0 
     );
     
     // setup character positions and sizes
-    localparam Hp = 200; // Bee width in pixels
+    localparam Hp = 200; // width in pixels
     
     always @(posedge Pclk)
         begin
@@ -18,7 +17,6 @@ module Hp2Sprite(
                 Hp2SpriteOn <= 1;
                 if (dmg>=200)
                     begin
-//                        win=1;
                         Hp2SpriteOn <= 0;
                     end
                 end

@@ -58,7 +58,6 @@ module Top(
     wire [9:0] SoulX;
     wire [9:0] SoulY;
      
-    // instantiate BeeSprite code
     wire SoulSpriteOn;       // 1=on, 0=off
     wire FrameSpriteOn;
     wire SanSpriteOn;
@@ -70,8 +69,8 @@ module Top(
     wire [9:0] dmg1;
     wire [9:0] dmg2;
     wire [9:0] dmg3;
-    wire [7:0] dout;
-    wire [7:0] SanDout;        // pixel value from Bee.mem
+    wire [7:0] dout;    // pixel value from RedSoul.mem
+    wire [7:0] SanDout;        // pixel value from San.mem
     wire state_game;
     wire dead;
     wire win;
@@ -79,19 +78,19 @@ module Top(
     PivotSprite PivotDisplay (.xx(x),.yy(y),.aactive(active),
                           .PSpriteOn(PivotSpriteOn),.Pclk(PixCLK),.Hit(space),.dmg(dmg),.state_game(state_game),.win(win),.dead(dead));
         
-       // instantiate TiTleSprite code
+    // instantiate TiTleSprite code
     wire TSpriteOn;       // 1=on, 0=off
-    wire [7:0] Tdout;        // pixel value from Bee.mem
+    wire [7:0] Tdout;        // pixel value from Title.mem
     TitleSprite TitleDisplay (.xx(x),.yy(y),.aactive(active),
                           .TitleSpriteOn(TSpriteOn),.dataout(Tdout),.Pclk(PixCLK),.space(space));
                           
     wire GSpriteOn;       // 1=on, 0=off
-    wire [7:0] Gdout;        // pixel value from Bee.mem
+    wire [7:0] Gdout;        // pixel value from Gameover.mem
     GameoverSprite GameoverDisplay (.xx(x),.yy(y),.aactive(active),
                           .GSpriteOn(GSpriteOn),.dataout(Gdout),.Pclk(PixCLK));
     
     wire WSpriteOn;       // 1=on, 0=off
-    wire [7:0] Wdout;        // pixel value from Bee.mem
+    wire [7:0] Wdout;        // pixel value from Win.mem
     WinSprite WinDisplay (.xx(x),.yy(y),.aactive(active),
                           .WSpriteOn(WSpriteOn),.dataout(Wdout),.Pclk(PixCLK));
                           
@@ -105,11 +104,11 @@ module Top(
     FrameSprite FrameDisplay (.xx(x),.yy(y),.aactive(active),
                           .FrameSpriteOn(FrameSpriteOn),.Pclk(PixCLK));
     
-    // Frame
+    // Hp
     HpSprite HpDisplay (.xx(x),.yy(y),.aactive(active),
                           .HpSpriteOn(HpSpriteOn),.Pclk(PixCLK),.dmg1(dmg1),.dmg2(dmg2),.dmg3(dmg3),.dead(dead));
                           
-    // Frame
+    // Hp2
     Hp2Sprite Hp2Display (.xx(x),.yy(y),.aactive(active),
                           .Hp2SpriteOn(Hp2SpriteOn),.Pclk(PixCLK),.dmg(dmg));
     
@@ -127,43 +126,42 @@ module Top(
     SanSprite SanDisplay (.xx(x),.yy(y),.aactive(active),
                           .SanSpriteOn(SanSpriteOn),.dataout(SanDout),.Pclk(PixCLK));
                           
-    // load colour palette
+    // load colour palettes
     reg [7:0] palette [0:191];  // 8 bit values from the 192 hex entries in the colour palette
     reg [7:0] COL = 0;          // background colour palette value
     initial begin
         $readmemh("pal24bit.mem", palette); // load 192 hex values into "palette"
     end
     
-    // load San colour palette
     reg [7:0] SanPalette [0:191];  // 8 bit values from the 192 hex entries in the colour palette
     reg [7:0] SanCOL = 0;          // background colour palette value
     initial begin
-        $readmemh("SanPal.mem", SanPalette); // load 192 hex values into "palette"
+        $readmemh("SanPal.mem", SanPalette); // load 192 hex values into "SanPalette"
     end
     
     reg [7:0] Tpalette [0:191];  // 8 bit values from the 192 hex entries in the colour palette
     initial begin
-        $readmemh("Titlepal.mem", Tpalette); // load 192 hex values into "palette"
+        $readmemh("Titlepal.mem", Tpalette); // load 192 hex values into "Tpalette"
     end
     
     reg [7:0] Mpalette [0:191];  // 8 bit values from the 192 hex entries in the colour palette
     initial begin
-        $readmemh("MemberPal.mem", Mpalette); // load 192 hex values into "palette"
+        $readmemh("MemberPal.mem", Mpalette); // load 192 hex values into "Mpalette"
     end
     
     reg [7:0] Cpalette [0:191];  // 8 bit values from the 192 hex entries in the colour palette
     initial begin
-        $readmemh("ColorbarPal.mem", Cpalette); // load 192 hex values into "palette"
+        $readmemh("ColorbarPal.mem", Cpalette); // load 192 hex values into "Cpalette"
     end
     
     reg [7:0] Gpalette [0:191];  // 8 bit values from the 192 hex entries in the colour palette
     initial begin
-        $readmemh("GameoverPal.mem", Gpalette); // load 192 hex values into "palette"
+        $readmemh("GameoverPal.mem", Gpalette); // load 192 hex values into "Gpalette"
     end
     
     reg [7:0] Wpalette [0:191];  // 8 bit values from the 192 hex entries in the colour palette
     initial begin
-        $readmemh("WinPal.mem", Wpalette); // load 192 hex values into "palette"
+        $readmemh("WinPal.mem", Wpalette); // load 192 hex values into "Wpalette"
     end
     
     segmentDriver sd(seg, an, dmg1+dmg2+dmg3, CLK);

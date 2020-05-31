@@ -5,7 +5,7 @@
 //--------------------------------------------------
 `timescale 1ns / 1ps
 
-// Setup TitleSprite Module
+// Setup GameoverSprite Module
 module GameoverSprite(
     input wire [9:0] xx, // current x position
     input wire [9:0] yy, // current y position
@@ -15,21 +15,20 @@ module GameoverSprite(
     input wire Pclk // 25MHz pixel clock
     );
 
-    // instantiate BeeRom code
-    reg [13:0] address; // 2^10 or 1024, need 34 x 27 = 918
+    reg [13:0] address; 
     GameoverRom GameoverVRom (.i_addr(address),.i_clk2(Pclk),.o_data(dataout));
             
     // setup character positions and sizes
-    reg [9:0] TX = 145; // Bee X start position
-    reg [8:0] TY = 190; // Bee Y start position
-    localparam TWidth = 350; // Bee width in pixels
-    localparam THeight = 31; // Bee height in pixels
+    reg [9:0] TX = 145; // X start position
+    reg [8:0] TY = 190; // Y start position
+    localparam TWidth = 350; // width in pixels
+    localparam THeight = 31; // height in pixels
     reg check = 0;
   
     always @ (posedge Pclk)
     begin
         if (aactive)
-            begin // check if xx,yy are within the confines of the Bee character
+            begin 
                 if (xx==TX-1 && yy==TY && check==0)
                     begin
                         address <= 0;

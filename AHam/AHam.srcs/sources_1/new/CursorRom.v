@@ -20,21 +20,12 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module CursorRom(
-    input wire [9:0] i_Caddr, // (9:0) or 2^10 or 1024, need 34 x 27 = 918
+    input wire [9:0] i_Caddr, 
     input wire i_clk2,
-    output reg [7:0] o_Cdata // (7:0) 8 bit pixel value from Bee.mem
+    output reg [7:0] o_Cdata // (7:0) 8 bit pixel value from mem
     );
-/*    
-    (*ROM_STYLE="block"*) reg [7:0] memory_array [0:917]; // 8 bit values for 918 pixels of Bee (34 x 27)
 
-    initial begin
-            $readmemh("Bee.mem", memory_array);
-    end
-
-    always @ (posedge i_clk2)
-            o_Cdata <= memory_array[i_Caddr];  */
-
-    (*ROM_STYLE="block"*) reg [7:0] Cmemory_array [0:1023]; // 8 bit values for 918 pixels of Bee (34 x 27)
+    (*ROM_STYLE="block"*) reg [7:0] Cmemory_array [0:1023]; // 8 bit values for 1024 pixels
 
     initial begin
             $readmemh("Cursor.mem", Cmemory_array);

@@ -6,24 +6,24 @@ module SanSprite(
     input wire [9:0] yy, // current y position
     input wire aactive, // high during active pixel drawing
     output reg SanSpriteOn, // 1=on, 0=off
-    output wire [7:0] dataout, // 8 bit pixel value from Bee.mem
+    output wire [7:0] dataout, // 8 bit pixel value from San.mem
     input wire Pclk // 25MHz pixel clock
     );
 
-    // instantiate BeeRom code
-    reg [14:0] address; // 2^10 or 1024, need 34 x 27 = 918
+    // instantiate SanRom code
+    reg [14:0] address; // 120*190
     SanRom SanVRom (.i_addr(address),.i_clk2(Pclk),.o_data(dataout));
             
     // setup character positions and sizes
-    reg [9:0] SanX = 250; // Bee X start position
-    reg [8:0] SanY = 70; // Bee Y start position
-    localparam SanWidth = 120; // Bee width in pixels
-    localparam SanHeight = 190; // Bee height in pixels
+    reg [9:0] SanX = 250; // X start position
+    reg [8:0] SanY = 70; // Y start position
+    localparam SanWidth = 120; // width in pixels
+    localparam SanHeight = 190; // height in pixels
   
     always @ (posedge Pclk)
     begin
         if (aactive)
-            begin // check if xx,yy are within the confines of the Bee character
+            begin // check if xx,yy are within the confines of the San character
                 if (xx==SanX-1 && yy==SanY)
                     begin
                         address <= 0;

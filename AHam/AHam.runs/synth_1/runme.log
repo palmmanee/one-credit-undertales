@@ -9,30 +9,29 @@
     ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 
 source Top.tcl -notrace
-create_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 328.445 ; gain = 22.492
 Command: synth_design -top Top -part xc7a35tcpg236-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 15016 
+INFO: Helper process launched with PID 19836 
 WARNING: [Synth 8-2611] redeclaration of ansi port o_state_game is not allowed [C:/Users/Nai/Desktop/one-credit-undertales/AHam/AHam.srcs/sources_1/new/TimerState.v:31]
 WARNING: [Synth 8-1083] o_state_game was previously declared without a range [C:/Users/Nai/Desktop/one-credit-undertales/AHam/AHam.srcs/sources_1/new/TimerState.v:31]
 WARNING: [Synth 8-976] o_state_game has already been declared [C:/Users/Nai/Desktop/one-credit-undertales/AHam/AHam.srcs/sources_1/new/TimerState.v:31]
 WARNING: [Synth 8-2654] second declaration of o_state_game ignored [C:/Users/Nai/Desktop/one-credit-undertales/AHam/AHam.srcs/sources_1/new/TimerState.v:31]
 INFO: [Synth 8-994] o_state_game is declared here [C:/Users/Nai/Desktop/one-credit-undertales/AHam/AHam.srcs/sources_1/new/TimerState.v:26]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 860.707 ; gain = 240.012
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 859.609 ; gain = 238.586
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'Top' [C:/Users/Nai/Desktop/one-credit-undertales/AHam/AHam.srcs/sources_1/new/Top.v:3]
-INFO: [Synth 8-3876] $readmem data file 'pal24bit.mem' is read successfully [C:/Users/Nai/Desktop/one-credit-undertales/AHam/AHam.srcs/sources_1/new/Top.v:134]
-INFO: [Synth 8-3876] $readmem data file 'SanPal.mem' is read successfully [C:/Users/Nai/Desktop/one-credit-undertales/AHam/AHam.srcs/sources_1/new/Top.v:141]
-INFO: [Synth 8-3876] $readmem data file 'Titlepal.mem' is read successfully [C:/Users/Nai/Desktop/one-credit-undertales/AHam/AHam.srcs/sources_1/new/Top.v:146]
-CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'MemberPal.mem'; please make sure the file is added to project and has read permission, ignoring [C:/Users/Nai/Desktop/one-credit-undertales/AHam/AHam.srcs/sources_1/new/Top.v:151]
-INFO: [Synth 8-3876] $readmem data file 'ColorbarPal.mem' is read successfully [C:/Users/Nai/Desktop/one-credit-undertales/AHam/AHam.srcs/sources_1/new/Top.v:156]
-INFO: [Synth 8-3876] $readmem data file 'GameoverPal.mem' is read successfully [C:/Users/Nai/Desktop/one-credit-undertales/AHam/AHam.srcs/sources_1/new/Top.v:161]
-INFO: [Synth 8-3876] $readmem data file 'WinPal.mem' is read successfully [C:/Users/Nai/Desktop/one-credit-undertales/AHam/AHam.srcs/sources_1/new/Top.v:166]
+INFO: [Synth 8-3876] $readmem data file 'pal24bit.mem' is read successfully [C:/Users/Nai/Desktop/one-credit-undertales/AHam/AHam.srcs/sources_1/new/Top.v:133]
+INFO: [Synth 8-3876] $readmem data file 'SanPal.mem' is read successfully [C:/Users/Nai/Desktop/one-credit-undertales/AHam/AHam.srcs/sources_1/new/Top.v:139]
+INFO: [Synth 8-3876] $readmem data file 'Titlepal.mem' is read successfully [C:/Users/Nai/Desktop/one-credit-undertales/AHam/AHam.srcs/sources_1/new/Top.v:144]
+CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file 'MemberPal.mem'; please make sure the file is added to project and has read permission, ignoring [C:/Users/Nai/Desktop/one-credit-undertales/AHam/AHam.srcs/sources_1/new/Top.v:149]
+INFO: [Synth 8-3876] $readmem data file 'ColorbarPal.mem' is read successfully [C:/Users/Nai/Desktop/one-credit-undertales/AHam/AHam.srcs/sources_1/new/Top.v:154]
+INFO: [Synth 8-3876] $readmem data file 'GameoverPal.mem' is read successfully [C:/Users/Nai/Desktop/one-credit-undertales/AHam/AHam.srcs/sources_1/new/Top.v:159]
+INFO: [Synth 8-3876] $readmem data file 'WinPal.mem' is read successfully [C:/Users/Nai/Desktop/one-credit-undertales/AHam/AHam.srcs/sources_1/new/Top.v:164]
 INFO: [Synth 8-6157] synthesizing module 'keyboard' [C:/Users/Nai/Desktop/one-credit-undertales/AHam/AHam.srcs/sources_1/new/keyboard.v:22]
 INFO: [Synth 8-6157] synthesizing module 'PS2Receiver' [C:/Users/Nai/Desktop/one-credit-undertales/AHam/AHam.srcs/sources_1/new/PS2Receiver.v:22]
 INFO: [Synth 8-6157] synthesizing module 'debouncer' [C:/Users/Nai/Desktop/one-credit-undertales/AHam/AHam.srcs/sources_1/new/debouncer.v:23]
@@ -70,8 +69,8 @@ INFO: [Synth 8-6157] synthesizing module 'CursorSprite' [C:/Users/Nai/Desktop/on
 	Parameter C4Width bound to: 15 - type: integer 
 	Parameter C4Height bound to: 15 - type: integer 
 INFO: [Synth 8-6157] synthesizing module 'CursorRom' [C:/Users/Nai/Desktop/one-credit-undertales/AHam/AHam.srcs/sources_1/new/CursorRom.v:22]
-INFO: [Synth 8-5534] Detected attribute (* ROM_STYLE = "block" *) [C:/Users/Nai/Desktop/one-credit-undertales/AHam/AHam.srcs/sources_1/new/CursorRom.v:37]
-INFO: [Synth 8-3876] $readmem data file 'Cursor.mem' is read successfully [C:/Users/Nai/Desktop/one-credit-undertales/AHam/AHam.srcs/sources_1/new/CursorRom.v:40]
+INFO: [Synth 8-5534] Detected attribute (* ROM_STYLE = "block" *) [C:/Users/Nai/Desktop/one-credit-undertales/AHam/AHam.srcs/sources_1/new/CursorRom.v:28]
+INFO: [Synth 8-3876] $readmem data file 'Cursor.mem' is read successfully [C:/Users/Nai/Desktop/one-credit-undertales/AHam/AHam.srcs/sources_1/new/CursorRom.v:31]
 INFO: [Synth 8-6155] done synthesizing module 'CursorRom' (5#1) [C:/Users/Nai/Desktop/one-credit-undertales/AHam/AHam.srcs/sources_1/new/CursorRom.v:22]
 WARNING: [Synth 8-5788] Register sel_reg in module CursorSprite is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/Nai/Desktop/one-credit-undertales/AHam/AHam.srcs/sources_1/new/CursorSprite.v:78]
 INFO: [Synth 8-6155] done synthesizing module 'CursorSprite' (6#1) [C:/Users/Nai/Desktop/one-credit-undertales/AHam/AHam.srcs/sources_1/new/CursorSprite.v:23]
@@ -166,7 +165,7 @@ WARNING: [Synth 8-3331] design FrameSprite has unconnected port aactive
 WARNING: [Synth 8-3331] design PivotSprite has unconnected port aactive
 WARNING: [Synth 8-3331] design FightFrameSprite has unconnected port aactive
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:21 ; elapsed = 00:00:28 . Memory (MB): peak = 1031.922 ; gain = 411.227
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 1031.063 ; gain = 410.039
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -179,12 +178,12 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:32 . Memory (MB): peak = 1031.922 ; gain = 411.227
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 1031.063 ; gain = 410.039
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:24 ; elapsed = 00:00:32 . Memory (MB): peak = 1031.922 ; gain = 411.227
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:10 . Memory (MB): peak = 1031.063 ; gain = 410.039
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.140 . Memory (MB): peak = 1031.922 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.035 . Memory (MB): peak = 1031.063 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -231,26 +230,26 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/Top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1125.164 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1119.734 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.119 . Memory (MB): peak = 1125.164 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.057 . Memory (MB): peak = 1119.734 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:50 ; elapsed = 00:01:14 . Memory (MB): peak = 1125.164 ; gain = 504.469
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:21 . Memory (MB): peak = 1119.734 ; gain = 498.711
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:50 ; elapsed = 00:01:14 . Memory (MB): peak = 1125.164 ; gain = 504.469
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:21 . Memory (MB): peak = 1119.734 ; gain = 498.711
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:50 ; elapsed = 00:01:14 . Memory (MB): peak = 1125.164 ; gain = 504.469
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:21 . Memory (MB): peak = 1119.734 ; gain = 498.711
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-7031] Trying to map ROM "Cmemory_array" into Block RAM due to explicit "ram_style" or "rom_style" specification
 INFO: [Synth 8-7031] Trying to map ROM "memory_array" into Block RAM due to explicit "ram_style" or "rom_style" specification
@@ -301,7 +300,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'Bdir_reg' using encoding '
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'Bdir_reg' using encoding 'sequential' in module 'BallSprite3'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:29 ; elapsed = 00:01:57 . Memory (MB): peak = 1127.863 ; gain = 507.168
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:29 ; elapsed = 00:00:36 . Memory (MB): peak = 1124.598 ; gain = 503.574
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -787,7 +786,7 @@ INFO: [Synth 8-3886] merging instance 'Ball3Display/dmg3_reg[7]' (FDRE) to 'Ball
 INFO: [Synth 8-3886] merging instance 'Ball3Display/dmg3_reg[8]' (FDRE) to 'Ball3Display/dmg3_reg[9]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (Ball3Display/\dmg3_reg[9] )
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:17 ; elapsed = 00:02:53 . Memory (MB): peak = 1156.715 ; gain = 536.020
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:47 ; elapsed = 00:00:57 . Memory (MB): peak = 1155.441 ; gain = 534.418
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -836,8 +835,6 @@ ROM:
 |Top         | p_0_out    | 256x8         | LUT            | 
 |Top         | p_0_out    | 256x8         | LUT            | 
 |Top         | p_0_out    | 64x8          | LUT            | 
-|Top         | p_0_out    | 256x8         | LUT            | 
-|Top         | p_0_out    | 256x8         | LUT            | 
 |Top         | p_0_out    | 256x8         | LUT            | 
 |Top         | p_0_out    | 256x8         | LUT            | 
 |Top         | p_0_out    | 256x8         | LUT            | 
@@ -901,13 +898,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:58 ; elapsed = 00:03:40 . Memory (MB): peak = 1247.625 ; gain = 626.930
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:00 ; elapsed = 00:01:12 . Memory (MB): peak = 1244.035 ; gain = 623.012
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:03:04 ; elapsed = 00:03:46 . Memory (MB): peak = 1276.602 ; gain = 655.906
+Finished Timing Optimization : Time (s): cpu = 00:01:02 ; elapsed = 00:01:14 . Memory (MB): peak = 1272.941 ; gain = 651.918
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -955,7 +952,7 @@ INFO: [Synth 8-7053] The timing for the instance SanDisplay/SanVRom/o_data_reg_0
 INFO: [Synth 8-7053] The timing for the instance SanDisplay/SanVRom/o_data_reg_0_5 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7053] The timing for the instance SanDisplay/SanVRom/o_data_reg_0_6 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:03:12 ; elapsed = 00:03:55 . Memory (MB): peak = 1283.266 ; gain = 662.570
+Finished Technology Mapping : Time (s): cpu = 00:01:05 ; elapsed = 00:01:18 . Memory (MB): peak = 1279.148 ; gain = 658.125
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -979,13 +976,13 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:03:26 ; elapsed = 00:04:10 . Memory (MB): peak = 1287.805 ; gain = 667.109
+Finished IO Insertion : Time (s): cpu = 00:01:09 ; elapsed = 00:01:22 . Memory (MB): peak = 1284.664 ; gain = 663.641
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:03:26 ; elapsed = 00:04:10 . Memory (MB): peak = 1287.805 ; gain = 667.109
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:09 ; elapsed = 00:01:22 . Memory (MB): peak = 1284.664 ; gain = 663.641
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1004,25 +1001,25 @@ Report Check Netlist:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:03:28 ; elapsed = 00:04:12 . Memory (MB): peak = 1287.805 ; gain = 667.109
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:09 ; elapsed = 00:01:23 . Memory (MB): peak = 1284.664 ; gain = 663.641
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:03:28 ; elapsed = 00:04:12 . Memory (MB): peak = 1287.805 ; gain = 667.109
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:09 ; elapsed = 00:01:23 . Memory (MB): peak = 1284.664 ; gain = 663.641
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:03:28 ; elapsed = 00:04:12 . Memory (MB): peak = 1287.805 ; gain = 667.109
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:09 ; elapsed = 00:01:23 . Memory (MB): peak = 1284.664 ; gain = 663.641
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:03:28 ; elapsed = 00:04:12 . Memory (MB): peak = 1287.805 ; gain = 667.109
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:09 ; elapsed = 00:01:23 . Memory (MB): peak = 1284.664 ; gain = 663.641
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -1151,18 +1148,18 @@ Report Instance Areas:
 |51    |  timer                |TimerState       |    72|
 +------+-----------------------+-----------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:03:28 ; elapsed = 00:04:12 . Memory (MB): peak = 1287.805 ; gain = 667.109
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:09 ; elapsed = 00:01:23 . Memory (MB): peak = 1284.664 ; gain = 663.641
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 13 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:02:55 ; elapsed = 00:03:50 . Memory (MB): peak = 1287.805 ; gain = 573.867
-Synthesis Optimization Complete : Time (s): cpu = 00:03:29 ; elapsed = 00:04:13 . Memory (MB): peak = 1287.805 ; gain = 667.109
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:59 ; elapsed = 00:01:17 . Memory (MB): peak = 1284.664 ; gain = 574.969
+Synthesis Optimization Complete : Time (s): cpu = 00:01:09 ; elapsed = 00:01:23 . Memory (MB): peak = 1284.664 ; gain = 663.641
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.094 . Memory (MB): peak = 1287.805 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.058 . Memory (MB): peak = 1286.063 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 318 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1287.805 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1286.063 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 5 instances were transformed.
   LD => LDCE: 4 instances
@@ -1171,10 +1168,10 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 INFO: [Common 17-83] Releasing license: Synthesis
 217 Infos, 42 Warnings, 13 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:03:49 ; elapsed = 00:04:50 . Memory (MB): peak = 1287.805 ; gain = 959.359
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1287.805 ; gain = 0.000
+synth_design: Time (s): cpu = 00:01:14 ; elapsed = 00:01:34 . Memory (MB): peak = 1286.063 ; gain = 959.660
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1286.063 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/Nai/Desktop/one-credit-undertales/AHam/AHam.runs/synth_1/Top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Top_utilization_synth.rpt -pb Top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sat May 30 16:29:39 2020...
+INFO: [Common 17-206] Exiting Vivado at Sun May 31 17:20:40 2020...

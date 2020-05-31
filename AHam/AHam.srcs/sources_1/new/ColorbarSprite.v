@@ -25,24 +25,24 @@ module ColorbarSprite(
     input wire [9:0] yy, // current y position
     input wire aactive, // high during active pixel drawing
     output reg ColorSpriteOn, // 1=on, 0=off
-    output wire [7:0] dataout, // 8 bit pixel value from Bee.mem
+    output wire [7:0] dataout, // 8 bit pixel value from mem
     input wire Pclk // 25MHz pixel clock
     );
 
-    // instantiate BeeRom code
-    reg [13:0] address; // 2^10 or 1024, need 34 x 27 = 918
+    // instantiate ColorRom code
+    reg [13:0] address; 
     ColorbarRom ColorVRom (.i_addr(address),.i_clk2(Pclk),.o_data(dataout));
             
     // setup character positions and sizes
-    reg [9:0] CX = 150; // Bee X start position
-    reg [8:0] CY = 340; // Bee Y start position
-    localparam CWidth = 338; // Bee width in pixels
-    localparam CHeight = 15; // Bee height in pixels
+    reg [9:0] CX = 150; // X start position
+    reg [8:0] CY = 340; // Y start position
+    localparam CWidth = 338; // width in pixels
+    localparam CHeight = 15; // height in pixels
   
     always @ (posedge Pclk)
     begin
         if (aactive)
-            begin // check if xx,yy are within the confines of the Bee character
+            begin // check if xx,yy are within the confines of the character
                 if (xx==CX-1 && yy==CY)
                     begin
                         address <= 0;

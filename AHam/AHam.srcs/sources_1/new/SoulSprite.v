@@ -23,7 +23,7 @@ module SoulSprite(
             
     // setup character positions and sizes
     reg [9:0] SX = 310; // Soul X start position
-    reg [8:0] SY = 325; // SOul Y start position
+    reg [8:0] SY = 325; // Soul Y start position
     localparam SoulWidth = 15; // Soul width in pixels
     localparam SoulHeight = 15; // Soul height in pixels
   

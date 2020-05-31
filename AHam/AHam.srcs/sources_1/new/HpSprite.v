@@ -11,7 +11,7 @@ module HpSprite(
     );
     
     // setup character positions and sizes
-    localparam Hp = 200; // Bee width in pixels
+    localparam Hp = 200; // width in pixels
     
     always @(posedge Pclk)
         begin

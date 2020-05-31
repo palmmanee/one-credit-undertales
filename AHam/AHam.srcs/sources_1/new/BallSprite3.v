@@ -10,10 +10,10 @@ module BallSprite3(
     input wire state_game
     );
     
-    reg [9:0] hit=0;          // counter to slow alien movement
-    reg [9:0] B1X = 270;          // Alien1 X start position
-    reg [9:0] B1Y = 340;             // Alien1 Y start position
-    reg [1:0] Bdir = 1;             // direction of aliens: 0=right, 1=left
+    reg [9:0] hit=0;          // counter to slow ball movement
+    reg [9:0] B1X = 270;          // X start position
+    reg [9:0] B1Y = 340;             // Y start position
+    reg [1:0] Bdir = 1;             // direction of ball: 0=right, 1=left
     reg [1:0] del = 0;
 
     
@@ -38,7 +38,7 @@ module BallSprite3(
                 B1Y<=340;
                 del<=0;
             end
-        // slow down the alien movement / move aliens left or right
+        // slow down the ball movement / move ball left or right
         if (xx==639 && yy==479)
             begin
                 hit<=hit+1;
@@ -69,10 +69,4 @@ module BallSprite3(
             end
       end
       
-//      always @ (posedge Pclk)
-//        begin
-//        // slow down the alien movement / move aliens left or right
-//        if (xx==B1X && yy==B1Y)
-//            BallSpriteOn <=1;
-//        end
 endmodule
